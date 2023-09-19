@@ -11,7 +11,8 @@ const startButton = document.querySelector('#startButton');
 // and finally we store out stop button in a variable called stopButton
 const stopButton = document.querySelector('#stopButton');
 // now we have three HTML elements ready to use in our JavaScript code
-let countEl = document.getElementById("count-el") // pass in arguments
+let countEl = document.getElementById("count-el") // here I created the counting button.
+// once clicked it will be stored and all the clicks will be recorded. 
 
 console.log(countEl)
 
