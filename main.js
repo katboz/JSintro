@@ -11,6 +11,16 @@ const startButton = document.querySelector('#startButton');
 // and finally we store out stop button in a variable called stopButton
 const stopButton = document.querySelector('#stopButton');
 // now we have three HTML elements ready to use in our JavaScript code
+let countEl = document.getElementById("count-el") // pass in arguments
+
+console.log(countEl)
+
+let count = 0
+
+function increment() {
+    count = count + 1
+    countEl.innerText = count
+}
 
 // in this example we want to animate something and we want to be able to stop the animation as well
 // in that case we need to use a variable to store the animation id (so that we can stop it later)
@@ -31,8 +41,8 @@ function animate() { // everything between the curly brackets {} is the code tha
 
 
   // since we don't want the box to move outside the screen we need to check if the top and left values are less than 450 before we add 5 to them
-  if (top < 450) top += 5;
-  if (left < 450) left += 5;
+  if (top < 550) top += 1;
+  if (left < 550) left += 1;
 
   // now we need to update the CSS properties of the box to make it move
   box.style.top = `${top}px`;
@@ -57,6 +67,9 @@ startButton.addEventListener('click', () => {
 stopButton.addEventListener('click', () => {
   cancelAnimationFrame(animationId);
 });
+
+
+
 
 // in our code we have decleared varables using both const and let
 // we use numbers in our top and left variables, the brown texts are called strings
